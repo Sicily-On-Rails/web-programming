@@ -6,9 +6,40 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: "shared/menu" %>
+
+
+    <div class="container">
+    <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1>Portale di Programmazione Web</h1>
+            <p>Progetto <b>Smart City</b> realizzato grazie al supporto di due comunità: <a href="https://www.facebook.com/SicilyOnRails/">Sicily On Rails </a>e <a href="https://www.facebook.com/RubyOnRailsCourse/">Ruby on Rails Course</a>.
+<br>
+Questo portale di programmazione rientra in quello che in ambito <b>smart city</b> viene chiamata FORMAZIONE DIGITALE.
+<hr>
+ ‪#‎smartgioiosa‬ ‪#‎sicilyonrails‬ ‪#‎rubyonrailscourse‬ ‪#‎rubyonrails‬ ‪#‎smartcity‬ ‪#‎formazionedigitale</p>
+            <!--<p><a class="btn btn-primary btn-large">Il Progetto</a>-->
+            </p>
+        </header>
+
+        <hr>
+
+      <%= yield %>
+        
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Sicily On Rails - Smart Gioiosa </p>
+                </div>
+            </div>
+        </footer>
+    </div>
   </body>
 </html>
