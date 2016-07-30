@@ -1,0 +1,21 @@
+<div class="row">  
+  <div class ="col-md-12">
+    <ol class="breadcrumb">
+      <li>
+        <%= link_to 'Home', root_path%>
+      </li>
+      <li class="active"><%= @course%></li>
+    </ol> 
+    <h3 class ="text-muted"><%= @course.upcase%></h3>
+    <hr/>
+  </div>
+  <div class ="col-md-12">
+    <%= render :partial =>'nav_tabs'%>
+    <%= render :partial =>'tab_content'%>
+    <hr/>
+  </div>
+  <div class="col-md-3">
+    <!--<#%=render :partial =>"sidebar"%>--> 
+  </div>
+</div>
+<%= render "script_show_nav_tabs"%>
