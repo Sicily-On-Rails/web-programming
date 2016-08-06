@@ -13,6 +13,58 @@
   </div>
   <div class="col-md-12">
     <h1>Struttura di un documento html5</h1>
-    <p></p>
-  </div>
+      <p>Seppure molto potente, HTML non è un linguaggio complesso e può offrire soddisfazioni immediate. Per iniziare basta pochissimo, quasi niente in realtà:
+      <ul>
+      <li><strong>Un browser</strong>, ne abbiamo almeno uno già installato nel PC o nei device che utilizziamo.</li>
+    
+      <li>Un <strong>editor di testi</strong>, anche di questi ce ne sono a bizzeffe e tipicamente ce n’è uno in ogni ambiente operativo. L’importante è ricordare che non dobbiamo utilizzare programmi come Word, OpenOffice o WordPad, che sono “word processor” evoluti e non servono allo scopo.<br>
+        <ul>
+          <li>Per gli utenti <b>Windows</b> consiglio <b>notepad++</b> ma va benissimo anche il <b>blocco note</b>.</li> 
+          <li>Per gli utenti Linux(Ubuntu) va benissimo un qualsiasi eitor di teso come <b>gedit</b> o <b>vim</b>, anche se quest'ultimo è  pò più complesso da utilizzare.</li>
+          <li>Per gli utenti Mac Osx <b>TexMate</b> che è a pagamento o <b>TextEdit</b>, quest'ultimo è gratuito.</li>
+        </ul>
+       </li>
+      </ul>
+      </p>
+      <h5><%="Vediamo la struttura di un documento HTML5".upcase%></h5>
+        
+        <pre>
+          <span class="cp">&lt;!doctype html&gt;</span>
+          <span class="cp">&lt;html lang="it"&gt;</span>
+          &lt;head&gt;&lt;title&gt;Ciao Mondo!&lt;/title&gt;&lt;/head&gt;
+          <code>&lt;body&gt;</code>
+            &lt;h1&gt;Ciao Mondo!&lt;/h1&gt;
+            &lt;p&gt;Questa è la nostra prima pagina HTML!&lt;/p&gt; 
+          <code>&lt;/body&gt;</code>
+          <span class="cp">&lt;/html&gt;</span> 
+        </pre>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Descrizione</th>
+            </tr>
+          </thead>
+            <tbody>
+              <tr>
+                <td><b>&lt;!doctype html&gt;</b></td>
+                <td>Serve semplicemente a dire che il file è una pagina HTML e in particolare che si tratta di un documento secondo lo standard HTML5. Lo si mette punto e basta.</td>
+              </tr>
+              <tr>
+                <td><b>&lt;html&gt;</b></td>
+                <td>È il tag che racchiude tutta la pagina e ci permette ad esempio di definire quale sia la lingua della pagina, come nel nostro caso in cui abbiamo definito che il documento è in Italiano grazie all’attributo <code>lang="it"</code></td>
+              </tr>
+              <tr>
+                <td><b>&lt;head&gt;</b></td>
+                <td>Questo tag contiene una serie di informazioni utili per la gestione della pagina, nel nostro caso abbiamo definito ad esempio quale sarà il titolo che apparirà sui motori di ricerca e sulle linguette del browser, grazie al tag <code>&lt;title&gt;</code>, ma questa sezione è destinata a contenere molto di più: dall’inserimento di librerie alla definizione dell’insieme di caratteri. Vedremo tutto in seguito.</td>
+              </tr>
+              <tr>
+                <td><b>&lt;body&gt;</b></td>
+                <td> Contiene gli elementi della pagina, tutto il contenuto e tutti i relativi tag che saranno poi resi a video vengono inseriti qui dentro, come abbiamo fatto nel nostro caso con il titolo e il paragrafo.</td>
+              </tr>
+            <tbody> 
+        </table> 
+        <hr>
+        <b><i>Risorse della lezione: <a href="http://www.html.it/pag/16033/struttura-della-pagina/">html.it</a></i></b>
+    </div>
 </div>
