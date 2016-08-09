@@ -40,7 +40,21 @@
   </div>
   <div class="tab-pane fade" id="exercises">
     <br>
-    <p class="text-muted">NESSUN ESERCIZIO PRONTO PER QUESTO CORSO</p>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Titolo</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Ciao Mondo</b></td>
+      <td class="text-center"><%= link_to  '<span class="glyphicon glyphicon-eye-open"></span>'.html_safe,corsi_html5_esercizi_hello_world_path, :rel => "nofollow", "data-placement"=>"top", "data-original-title"=>"Show lesson"%></td>
+    </tr>
+    </tr>
+  </tbody>
+</table>
   </div>
   <div class="tab-pane fade" id="news">
     <br>
@@ -52,7 +66,8 @@
   </div>
   <div class="tab-pane fade" id="resources">
     <br>
-    <p class="text-muted"> NESSUNA RISORSA PRESENTE PER QUESTO CORSO</p>
+    <a href="https://github.com/Sicily-On-Rails/exercises-web-programming-portal/tree/master/html5">Codice Esercizi</a>
+    <!--<p class="text-muted"> NESSUNA RISORSA PRESENTE PER QUESTO CORSO</p>-->
   </div>
   <div class="tab-pane fade" id="social">
     <br>
