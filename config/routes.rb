@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'lessons/il-linguaggio'
 
   get 'lessons/struttura-documento'
+  
+  get 'lessons/protocollo-http'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "home#index"

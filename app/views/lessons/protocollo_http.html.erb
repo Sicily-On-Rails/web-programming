@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-12">
+    <ol class= "breadcrumb">
+    </ol>
+  </div>
+  <div class="col-md-12">
+    <h1>IL PROTOCOLLO HTTP - (Parte 1)</h1>
+    <br>
+    <p>
+      L'<strong>HyperText Transfer Protocol (HTTP)</strong> (protocollo di trasferimento di un ipertesto) è un protocollo a livello applicativo usato come principale sistema per la trasmissione d'informazioni sul web ovvero in un'architettura tipica client-server.
+    </p>
+    <p>Il protocollo <strong>HTTP</strong> è uno dei più importanti e datati protocolli di livello applicativo.</p>
+    <p>Tutte le volte che un utente richiede una qualsiasi pagina Web utilizza il protocollo HTTP sia per fare la richiesta al server che ospita la pagina sia per ricevere i dati provenienti in risposta dal server.
+E' evidente, dunque, che il protocollo HTTP è presente sia nello strato applicativo del Client che in quello del Server altrimenti la comunicazione sopra descritta non avrebbe luogo.</p>
+
+  <p><img src="https://dl.dropboxusercontent.com/s/8o7x9i1klh8qf91/http_flow.jpg?dl=0", alt="protocollo-http" class="img-responsive img-thumbnail" ></img></p> 
+    <p>La richiesta da parte del client viene effettuata tramite il browser che gestisce l'intera comunicazione e restituisce a video la risorse richiesta dall'utente. Il browser vede una pagina web come un insieme di oggetti legati tra di loro attraverso collegamenti ipertestuali.</p>
+<p>Quindi una pagina web sicuramente sarà formata da un corpo HTML più altre risorse che potrebbero essere script, immagini, applet Java e così via.</p>
+<p>Tutte le risorse presenti su un server possono essere raggiunte grazie ad un percorso detto URL che fa riferimento ad uno solo e specifico oggetto. La struttura delle URL è definita da un standard ben preciso e consta di due strutture principali. Prendiamo come esempio la seguente risorsa:</p>
+  <pre>http://webprogramming.smartgioiosa.it/corsi/html5/il-linguaggio.html</pre>
+  <ul>
+    <li><strong>http://webprogramming.smartgioiosa.it/</strong>: identifica l'host(server - computer) sul quale viene ospitata la risorsa che cerchiamo.</li>
+    <li><strong>/corsi/html5/il-linguaggio.html</strong>: dentifica il percorso da seguire (all'interno dell'host) per raggiungere la risorsa cercata. Nel percorso possono essere passati dei parametri (QueryString) per effettuare interrogazioni a script lato server (dei programmi veri e prori).  </li>
+  </ul> 
+  
+  <p>Esistono due varianti al protocollo: l'<strong>HTTP/1.0</strong> più datato e <strong>HTTP/1.1</strong> che ora come ora è quello più utlizzato da browser e server web essendo più recente e più performante rispetto alla versione 1.0.</p>
+  
+    <p>La particolarità del protocollo HTTP è quella di essere definito come uno <strong>Stateless Protocol</strong> ovvero un protocollo senza stato dato che i server web non mantengono nessun tipo di informazione sui client che hanno richiesto una risorsa. Per ovviare a questo problema si utilizzano i <strong> Cookie </strong>, ma di questo ne parleremo in seguito.</p>
+  <p>
+  L'HTTP è un protocollo di tipo <strong>request/response</strong>. Per prima cosa, quindi, deve essere fatta una richiesta per una risorsa e poi avviene la risposta con il trasferimento dei dati.
+</p>
+<p><img src="https://dl.dropboxusercontent.com/s/x3ie23akggaj8xt/http-2-0-funzionalita-http-1-1.png?dl=0
+", alt="funzionalità-http-1-1" class="img-responsive img-thumbnail" ></img></p> 
+<p>
+Vediamo adesso, con un esempio, come avviene questo procedimento immaginando che l'utente richieda una pagina web che contiene testo HTML con riferimento a tre immagini GIF:
+  </p>
+  <ol>
+<li>Il client richiede di aprire una connessione di tipo TCP verso il server che ospita la risorsa cercata sulla porta 80 che è la porta assegnata di dafault per l'HTTP.</li>
+<li>Il server riceve la richiesta di connessione, se le condizioni lo permettono, accetta la richiesta di connessione e invia una notifica al client.</li>
+<li>Il client allora formula una richiesta HTTP per la risorsa desiderata e passa la richiesta, tramite la socket, al protocollo TCP che si preoccuperà di gestire la connessione con il server.</li>
+<li>Il server riceve la richiesta HTTP del client e se non ci sono errori di sintassi nella richiesta invia al client il testo HTML della pagina richiesta. A questo punto il Server notifica al TCP di chiudere la connessione con il client non appena arrivi la notifica di corretta ricezione.</li>
+<li>Il client riceve correttamente i dati contenenti il testo HTML, lo analizza e nell'analisi trova il riferimento alle tre immagini GIF.
+Per ogni immagini GIF vengono ripetuti i passi dall'1-5.</li>
+<li>Il client, una volta scaricato il corpo HTML della pagina e tutti gli oggetti refereziati dalla stessa, assembla il tutto mostrando a video la pagina web richiesta precedentemente dall'utente.</li>
+
+  </ol>
+   <p>Fatta questa rapida panoramica sull'HTTP nella seconda parte entreremo nel vivo della trattazione del protocollo spiegando in che modo viene gestita la richiesta da parte di un client e il conseguente trasferimento dei dati</p> 
+  </div>
+</div> 

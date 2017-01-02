@@ -4,4 +4,7 @@ class LessonsController < ApplicationController
 
   def struttura_documento
   end
+  
+  def protocollo_http
+  end
 end
