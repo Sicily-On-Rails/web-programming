@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+    
+  get "courses" => "courses#index"
+
+    
 
   get 'exercises/index'
 
