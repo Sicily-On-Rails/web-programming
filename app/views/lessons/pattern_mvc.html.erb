@@ -1,0 +1,21 @@
+<div class="row">
+  <div class ="col-md-12">
+    <ol class="breadcrumb">
+      <li>
+        <%= link_to 'Home', root_path%>
+      </li>
+      <li><%= link_to "Ruby On Rails", corsi_ruby_on_rails_path%></li>
+      <li><a href="/corsi/ruby-on-rails#lessons">Lezioni</a></li>
+      <li class="active">Il Pattern MVC</li>
+    </ol>
+    <h3 class ="text-muted"></h3>
+    <hr/>
+  </div>
+  <div class ="col-md-12">
+    <p>Un'appicazione <strong>Ruby on Rails</strong> segue il <strong>PATTERN MVC (Model - View - Controller)</strong>, che separa la “logica di dominio” (chiamata anche “logica di business”) dalla logica di input e presentazione associata a un’interfaccia grafica utente (GUI). Nel caso delle applicazioni web, la “logica di dominio” generalmente consiste in modelli di dati per elementi come utenti, articoli e prodotti, mentre la GUI è solo una pagina web in un browser web.</p>
+    <img src="/assets/pattern-mvc.png">
+    <p>Quando interagisce con un’applicazione web, un browser invia una richiesta, che viene ricevuta da un server web e inoltrata a un controller Rails, che si occuperà delle azioni successive. In alcuni casi, il controller esegue immediatamente il rendering di una vista, che è un modello che viene convertito in HTML e inviato nuovamente al browser. Più spesso, per i siti dinamici, il controller interagisce con un modello, che è un oggetto di Ruby che rappresenta un elemento del sito (come un utente) e che si occupa della comunicazione con il database. Dopo aver richiamato il modello, il controller esegue il rendering della vista e restituisce la pagina web completa al browser come HTML.</p>
+    <p>Nello sviluppo di <strong>GIOSANDO</strong> capiremo come funziona la logica del PATTERN MVC.</p>
+  </div>
+
+</div>

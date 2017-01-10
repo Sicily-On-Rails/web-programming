@@ -1,0 +1,99 @@
+<div class="row">
+  <div class ="col-md-12">
+    <ol class="breadcrumb">
+      <li>
+        <%= link_to 'Home', root_path%>
+      </li>
+      <li class="active"><%= @course%></li>
+    </ol>
+    <h3 class ="text-muted"><%= @course.upcase%></h3>
+    <hr/>
+  </div>
+  <div class ="col-md-12">
+    <%= render :partial =>'nav_tabs'%>
+
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="description">
+        <br>
+        <p>L'obiettivo del corso html5 è quello di spiegare alcuni concetti base su questo linguaggio di markup. I pochi argomenti che andremo a spiegare saranno utilizzati nel corso twitter bootstrap e ruby on rails.</p>
+        <hr>
+        <p class="text-muted"> PROGRAMMA </P>
+        <p>
+          <ul>
+            <li>Il framework Ruby On Rails</li>
+            <!--<li>Introduzione</li>-->
+            <li>Il pattern MVC</li>
+
+          </ul>
+        </p>
+      </div>
+      <div class="tab-pane fade" id="lessons">
+        <br>
+        <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Titolo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>IL FRAMEWORK RUBY ON RAILS</b></td>
+          <td class="text-center"><%= link_to  '<span class="glyphicon glyphicon-eye-open"></span>'.html_safe,corsi_ruby_on_rails_il_framework_ruby_on_rails_path, :rel => "nofollow", "data-placement"=>"top", "data-original-title"=>"Show lesson"%></td>
+        </tr>
+        <!--<tr>
+          <td><b>INTRODUZIONE</b></td>
+          <td class="text-center"><%= link_to  '<span class="glyphicon glyphicon-eye-open"></span>'.html_safe,corsi_ruby_on_rails_introduzione_path, :rel => "nofollow", "data-placement"=>"top", "data-original-title"=>"Show lesson"%></td>
+        </tr>-->
+        <tr>
+          <td><b>PATTERN MVC</b></td>
+          <td class="text-center"><%= link_to  '<span class="glyphicon glyphicon-eye-open"></span>'.html_safe,corsi_ruby_on_rails_pattern_mvc_path, :rel => "nofollow", "data-placement"=>"top", "data-original-title"=>"Show lesson"%></td>
+        </tr>
+      </tbody>
+    </table>
+        <!--
+        <p class="text-muted">NESSUNA LEZIONE PRESENETE PER QUESTO CORSO</p>
+        -->
+      </div>
+      <div class="tab-pane fade" id="exercises">
+        <br>
+          <p class="text-muted"> NESSUNA RISORSA PRESENTE PER QUESTO CORSO</p>
+      </div>
+      <div class="tab-pane fade" id="news">
+        <br>
+        <p class="text-muted"> NESSUNA NORIZIA PRESENTE PER QUESTO CORSO</p>
+      </div>
+      <div class="tab-pane fade" id="alerts">
+        <br>
+        <p class="text-muted">NESSUN AVVISO PRESENTE PER QUESTO CORSO</p>
+      </div>
+      <div class="tab-pane fade" id="resources">
+        <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Titolo</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><b>IL PROTOCOLLO HTTP</b></td>
+          <td class="text-center"><%= link_to  '<span class="glyphicon glyphicon-eye-open"></span>'.html_safe,lessons_protocollo_http_path, :rel => "nofollow", "data-placement"=>"top", "data-original-title"=>"Show lesson"%></td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="social">
+        <br>
+        <p class="text-muted"> NESSUN SOCIAL NETWORKS PRESENTE PER QUESTO CORSO</p>
+      </div>
+    </div
+
+
+    <hr/>
+  </div>
+  <div class="col-md-3">
+    <!--<#%=render :partial =>"sidebar"%>-->
+  </div>
+</div>
+<%= render "script_show_nav_tabs"%>
