@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-
   get "courses" => "courses#index"
-
-
 
   get 'exercises/index'
 
@@ -24,4 +21,4 @@ Rails.application.routes.draw do
   match 'corsi/html5/il-linguaggio' => 'lessons#il_linguaggio', via: :get
   match 'corsi/html5/struttura-documento' => 'lessons#struttura_documento', via: :get
   match 'corsi/html5/esercizi/hello-world' => 'exercises#html5_hello_world', via: :get
-end
+ end
