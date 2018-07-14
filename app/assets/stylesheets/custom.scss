@@ -1,21 +1,24 @@
 @import "bootstrap";
-
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  padding-top: 54px;
 }
 
-.hero-spacer {
-    margin-top: 50px;
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
 }
 
-.hero-feature {
-    margin-bottom: 30px;
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-footer {
-    margin: 50px 0;
-}
-
-.cp {
-  color: #099;
+.portfolio-item {
+  margin-bottom: 30px;
 }

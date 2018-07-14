@@ -25,21 +25,15 @@
   <body>
     <%= render partial: "shared/menu" %>
 
-
+    <%if controller.controller_name=="home"%>
+      <%= render partial: "shared/slider"%>
+    <%end%>
+    
     <div class="container">
-
       <%= yield %>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                  <em>Copyright &copy; <a href="http://www.ascwebapps.com/">ASC Web Apps</a> - <a href="http://www.sicilyonrails.org/">Sicily On Rails</a> - <a href="http://www.smartgioiosa.it/"> Smart Gioiosa </a></em>
-                </div>
-            </div>
-        </footer>
     </div>
+    <!-- Footer -->
+    <%= render partial: "shared/footer"%>
+    <!--/Footer -->    
   </body>
 </html>
