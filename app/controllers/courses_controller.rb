@@ -4,7 +4,10 @@ class CoursesController < ApplicationController
     #@courses = [ 'Html5', 'Css3', 'Javascript', 'Ruby On Rails', 'Ruby']
     @courses = Course.all
   end
-
+  
+  def show
+    @course = Course.find(params[:id])
+  end
 
   def html5
     @course = "Html5"

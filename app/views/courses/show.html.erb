@@ -1,0 +1,92 @@
+<%= content_for :title_h1, title_h1_helper([@course.name])%>
+<%= content_for :breadcrumbs,  breadcrumbs_helper([[controller.controller_name.titleize, courses_path ], @course.name])%>
+
+
+<!-- Portfolio Item Row -->
+<div class="row">
+  <div class="col-md-8">
+    <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+  </div>
+  <div class="col-md-4">
+    <h3 class="my-3">Course description</h3>
+    <p><%=@course.description%></p>
+    <h3 class="my-3">Project Details</h3>
+    <ul>
+      <li>Lorem Ipsum</li>
+      <li>Dolor Sit Amet</li>
+      <li>Consectetur</li>
+      <li>Adipiscing Elit</li>
+    </ul>
+  </div>
+</div>
+<!-- /.row -->
+
+<!-- Details row-->
+<h3 class="my-4">Details</h3>
+
+<div class="row"> 
+  <div class="col-md-12 mb-4">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#syllabus" role="tab" aria-controls="home" aria-selected="true">Syllabus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="lessons-tab" data-toggle="tab" href="#lessons" role="tab" aria-controls="lessons" aria-selected="false">Lessons</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="exercises-tab" data-toggle="tab" href="#exercises" role="tab" aria-controls="exercises" aria-selected="false">Exercises</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="false">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="alerts-tab" data-toggle="tab" href="#alerts" role="tab" aria-controls="alerts" aria-selected="false">Alerts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="resourses-tab" data-toggle="tab" href="#resources" role="tab" aria-controls="resources" aria-selected="false">Resources</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="socials-tab" data-toggle="tab" href="#socials" role="tab" aria-controls="socials" aria-selected="false">Socials Networks</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="syllabus" role="tabpanel" aria-labelledby="syllabus-tab">...</div>
+      <div class="tab-pane fade" id="lessons" role="tabpanel" aria-labelledby="lessons-tab">...</div>
+      <div class="tab-pane fade" id="exercises" role="tabpanel" aria-labelledby="exercises-tab">...</div>
+      <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">...</div>
+      <div class="tab-pane fade" id="alerts" role="tabpanel" aria-labelledby="alerts-tab">...</div>
+      <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">...</div>
+      <div class="tab-pane fade" id="socials" role="tabpanel" aria-labelledby="socials-tab">...</div>
+    </div>
+
+  </div>
+</div>
+<!-- /row -->
+
+<!-- Related Courses row-->     
+<h3 class="my-4">Related Courses</h3>
+
+<div class="row">
+  <div class="col-md-3 col-sm-6 mb-4">
+    <a href="#">
+      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+    </a>
+  </div>
+  <div class="col-md-3 col-sm-6 mb-4">
+    <a href="#">
+      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+    </a>
+  </div>
+  <div class="col-md-3 col-sm-6 mb-4">
+    <a href="#">
+      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+    </a>
+  </div>
+  <div class="col-md-3 col-sm-6 mb-4">
+    <a href="#">
+      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+    </a>
+  </div>
+</div>
+<!-- /.row -->

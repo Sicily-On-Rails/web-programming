@@ -1,23 +1,23 @@
-<h1><%= @courses.size%> Courses</h1>
+<%= content_for :title_h1, title_h1_helper([controller.controller_name.titleize])%>
 
-<ul>
-  <%@courses.each do |course|%>
-    <li><%= course%></li>
-  <%end%>
-</ul>
+<%= content_for :breadcrumbs,  breadcrumbs_helper([controller.controller_name.titleize])%>
 
-
-
-
-<!--
-<h1>Courses</h1>
-
-Listing generate at <#%= @time%>
-
-<ul>
-  <li>Html5</li>
-  <li>Css3</li>
-  <li>Javascript</li>
-  <li>Ruby on Rails</li>
-<ul>
--->
+<!-- Project One -->
+<%@courses.each do |course|%>
+  <div class="row">
+    <div class="col-md-7">
+      <a href="#">
+        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+      </a>
+    </div>
+    <div class="col-md-5">
+      <h3><%= course.name%></h3>
+      <p><%= course.description%></p>
+      <%= link_to course_path(course), class: "btn btn-primary" do %>
+        View Course<span class="glyphicon glyphicon-chevron-right"></span>
+      <%end%>
+    </div>
+  </div>
+  <!-- /.row -->
+  <hr>
+<%end%>

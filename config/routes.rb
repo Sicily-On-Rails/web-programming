@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+   
   get "courses" => "courses#index"
 
   get 'exercises/index'
@@ -13,6 +14,10 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "home#index"
+  
+  resources :courses, only: [:index, :show]
+
+
   match 'corsi/html5'=> 'courses#html5', via: :get
   match 'corsi/ruby-on-rails'=> 'courses#ruby_on_rails', via: :get
   match 'corsi/ruby-on-rails/il-framework-ruby-on-rails' => 'lessons#il_framework_ruby_on_rails', via: :get

@@ -24,12 +24,15 @@
 
   <body>
     <%= render partial: "shared/menu" %>
-
+      
+    <!-- Sostituire con content_for-->
     <%if controller.controller_name=="home"%>
       <%= render partial: "shared/slider"%>
     <%end%>
-    
+
     <div class="container">
+      <%= yield :title_h1%>
+      <%= yield :breadcrumbs%>
       <%= yield %>
     </div>
     <!-- Footer -->
