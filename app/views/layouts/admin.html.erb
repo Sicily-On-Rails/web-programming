@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard Web Programming Portal</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <% render partial: "shared/menu" %>
+      
+    <ul>
+      <li><%= link_to "Home", admin_root_path%></li>
+      <li><%= link_to "Courses", admin_courses_path%></li>
+    </ul>
+      
+
+    <div class="container">
+      <% yield :title_h1%>
+      <% yield :breadcrumbs%>
+      <%= yield %>
+    </div>
+    <!-- Footer -->
+    <% render partial: "shared/footer"%>
+    <!--/Footer -->    
+  </body>
+</html>

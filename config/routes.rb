@@ -16,7 +16,12 @@ Rails.application.routes.draw do
   root to: "home#index"
   
   resources :courses, only: [:index, :show]
-
+  
+  namespace :admin do
+    root to: "dashboard#index"
+    resources :courses 
+  end
+  
 
   match 'corsi/html5'=> 'courses#html5', via: :get
   match 'corsi/ruby-on-rails'=> 'courses#ruby_on_rails', via: :get
