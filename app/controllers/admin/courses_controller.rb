@@ -9,6 +9,7 @@ class Admin::CoursesController < Admin::BaseController
   end
 
   def new
+    @course = Course.new
   end
     
   def edit

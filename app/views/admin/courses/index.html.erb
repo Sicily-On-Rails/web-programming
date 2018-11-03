@@ -4,13 +4,18 @@
     <div class="alert alert-warning" role="alert">
       <strong>NESSUN CORSO INSERITO NEL PORTALE DI PROGRAMMAZIONE WEB</strong>
       <hr>
-      <%= link_to fa_icon("plus")  + ' New Course', new_admin_course_path, class: "btn btn-success"%>
+      <%= link_to icon('fa', 'plus') + ' New Course', new_admin_course_path, class: "btn btn-success"%>
     </div>
    
     <%else%>
-      <table>
+      <!--<table class="table">
         
-      </table>  
+      </table>-->
+      <ul>
+        <%@courses.each do |course| %>
+          <li><%= course.name%></li>
+        <%end%>
+      </ul>  
     <%end%>
   </div>  
 </div>
