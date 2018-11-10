@@ -13,12 +13,7 @@
   </head>
 
   <body>
-    <ul>
-      <li><%= link_to "Dashboard", admin_root_path%></li>
-      <li><%= link_to "Courses", admin_courses_path%></li>
-    </ul>
-    <%= render partial: "admin/shared/menu" %>
-   
+    <%= render partial: "admin/shared/menu" %> 
 
     <div class="container">
       <% yield :title_h1%>
