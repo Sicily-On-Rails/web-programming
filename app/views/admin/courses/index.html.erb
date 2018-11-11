@@ -13,7 +13,7 @@
       </table>-->
       <ul>
         <%@courses.each do |course| %>
-          <li><%= course.name%></li>
+          <li><%=link_to  course.name, admin_course_path(course)%></li>
         <%end%>
       </ul>  
     <%end%>
