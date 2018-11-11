@@ -14,7 +14,10 @@
 
   <body>
     <%= render partial: "admin/shared/menu" %> 
-
+    <% flash.each do |key, message| %>
+      <div><%= message %></div>
+    <% end %>
+    
     <div class="container">
       <% yield :title_h1%>
       <% yield :breadcrumbs%>

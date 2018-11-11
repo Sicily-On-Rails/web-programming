@@ -16,6 +16,13 @@ class Admin::CoursesController < Admin::BaseController
   end
   
   def create
+    @course = Course.new(course_params)
+    if @course.save
+      flash[:notice] = "Course has been created." 
+      redirect_to [:admin, @course]
+    else
+      #
+    end  
   end
   
   def update
