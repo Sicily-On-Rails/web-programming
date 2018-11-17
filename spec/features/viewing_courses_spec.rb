@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Admin can view courses" do 
-  scenario "with the course detail" do
+  scenario "with the course details" do
     course = FactoryBot.create(:course, name: "Ruby")
 
     visit "admin/courses"

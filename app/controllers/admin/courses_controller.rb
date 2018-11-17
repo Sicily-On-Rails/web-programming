@@ -26,6 +26,12 @@ class Admin::CoursesController < Admin::BaseController
   end
   
   def update
+    if @course.update(course_params)
+      flash[:notice] = "Course has been updated"
+      redirect_to [:admin, @course]
+    else
+      flash[:danger] = "Course has not been updated"
+    end
   end
   
   def destroy
