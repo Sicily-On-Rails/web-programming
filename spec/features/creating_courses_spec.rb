@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.feature "Users can create new course" do
+RSpec.feature "Administrator can create new course" do
   scenario "with valid attributes" do
     visit "/admin/courses"
   

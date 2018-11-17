@@ -35,6 +35,9 @@ class Admin::CoursesController < Admin::BaseController
   end
   
   def destroy
+    @course.destroy
+    flash[:notice] = "Course has been deleted. "
+    redirect_to admin_courses_path
   end
   
   private
