@@ -1,24 +1,15 @@
+<%= content_for :title_h1, title_h1_helper([controller.controller_name])%>
+
+<%= content_for :breadcrumb, breadcrumb_helper(['Courses'])%>
 <div class="row">
-  <div class="col-md-12 text-center">
-  <%if @courses.nil?%> 
-    <div class="alert alert-warning" role="alert">
-      <strong>NESSUN CORSO INSERITO NEL PORTALE DI PROGRAMMAZIONE WEB</strong>
-      <hr>
-      <%= link_to icon('fa', 'plus') + ' New Course', new_admin_course_path, class: "btn btn-success"%>
-    </div>
-   
-    <%else%>
-      <!--<table class="table">
-        
-      </table>-->
-      <ul>
-        <%@courses.each do |course| %>
-          <li><%=link_to  course.name, admin_course_path(course)%></li>
-        <%end%>
-      </ul>  
-    <%end%>
+  <div class="col-md-4">
+    <%= render 'sidebar' %>
+  </div><!--/col-md-4-->
 
-    <%= link_to icon('fa', 'plus') + ' New Course', new_admin_course_path, class: "btn btn-success"%>
+  <div class="col-md-8">
+    <%= render 'list_courses'%>
+  </div><!--/col-md-8-->
+</div><!--/row-->
 
-  </div>  
-</div>
+
+

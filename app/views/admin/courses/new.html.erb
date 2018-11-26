@@ -1,2 +1,8 @@
-<h1 class="mt-4 mb-3"> New course </h1>
-<%= render 'form', course: @course%>
+<%= content_for :title_h1, title_h1_helper([action_name, controller.controller_name.singularize])%>
+<%= content_for :breadcrumb, breadcrumb_helper([['Courses', admin_courses_path], action_name])%>
+
+<div class="row">
+  <div class="col-md-12 mb-4">
+    <%= render 'form', course: @course%>
+  </div>
+</div>

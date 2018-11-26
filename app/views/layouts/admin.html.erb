@@ -8,8 +8,7 @@
 
     <%= stylesheet_link_tag    'admin', media: 'all'%>
     <%= javascript_include_tag 'admin'%>
-      
-    
+     
   </head>
 
   <body>
@@ -19,12 +18,12 @@
     <% end %>
     
     <div class="container">
-      <% yield :title_h1%>
-      <% yield :breadcrumbs%>
+      <%= yield :title_h1%>
+      <%= yield :breadcrumb%>
       <%= yield %>
     </div>
     <!-- Footer -->
-    <% render partial: "shared/footer"%>
+    <%= render partial: "shared/footer"%>
     <!--/Footer -->    
   </body>
 </html>
